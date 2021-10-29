@@ -19,7 +19,7 @@ skin: "/assets/css/skins/default.css"
 locale: en-UK
 title: "Programming and Maths"
 description: " My personal blog where I write about my two passions: programming and maths."
-baseurl: "/programming-maths"
+baseurl: "/programming-and-maths"
 url: "https://nikbomb.github.io"
 logo: # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
