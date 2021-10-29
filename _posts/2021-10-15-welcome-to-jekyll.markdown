@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Programming And Math!"
+title:  "Welcome to Programming And Maths!"
 date:   2021-10-15 16:02:23 +0100
 categories: HelloWorld
 ---
