@@ -16,11 +16,11 @@
 #theme: jekyll-theme-so-simple
 remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
-locale: en-US
-title: "My Awesome Site"
-description: "It really is the best."
-baseurl: # the subpath of your site, e.g. "/blog"
-url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+locale: en-UK
+title: "Programming and Math"
+description: " My personal blog where I write about my two passions: programming and math."
+baseurl: "/programming-math"
+url: "https://nikbomb.github.io"
 logo: # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
@@ -51,8 +51,8 @@ feed:
   path: atom.xml
 
 # Pagination - https://jekyllrb.com/docs/pagination/
-# paginate: 10
-# paginate_path: /page:num/
+#paginate: 10
+#paginate_path: /page:num/
 
 # Search
 search_full_content: false # can have performance implications for large sites
