@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Nicodes
+title: Pragramming and math 
 email: nicola.bombace@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
    This is my programming blog in which I write about my 
@@ -29,11 +29,13 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 
-remote_theme: jekyll/minima
+#remote_theme: jekyll/minima
+theme: jekyll-theme-so-simple
 
-minima:
-  skin: dark
-  date_format: "%b %-d, %Y"
+
+#minima:
+#  skin: dark
+#  date_format: "%b %-d, %Y"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
