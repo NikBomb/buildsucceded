@@ -1,1 +1,1 @@
-# nicodes
+# programming and math
