@@ -73,6 +73,8 @@ search_full_content: false # can have performance implications for large sites
 #   - vendor/gems/
 #   - vendor/ruby/
 
+google_analytics: 'G-C7VH774STY'
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
