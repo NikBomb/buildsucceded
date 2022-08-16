@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-In this blog you will find interesting posts at the intersection between programming and mathematics. The world around us can be described using wonderful equations, but rarely they can be solved without the help of a computer.
+In this blog you will find interesting posts at the intersection of programming and mathematics. The world around us can be described using wonderful equations, but rarely they can be solved without the help of a computer.
 
 These equations can be programmed in a small script that will solve a narrow class of problems, only when fiddling with the inputs and wasting an uncountable amount of hours. I have always been fascinated by big organic libraries, that can be applied to a variety of problems and at the same time help understanding better what is actually happening under the hood. 
 
