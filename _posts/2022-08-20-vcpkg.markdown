@@ -9,12 +9,12 @@ categories: [C++]
 In the past month I have embarked on a journey to learn more about computer graphics, and I decided to start from OpenGL (if you are interested as well you can start from [learnopengl](https://www.learnopengl.com)). When I started a new solution for Visual Studio, I found a lot of tutorials which involved a lot (too much!) clicking around to link all the needed libraries [Set up Visual Studio for OpenGL](https://www.geeksforgeeks.org/how-to-setup-opengl-with-visual-studio-2019-on-windows-10/).  
 
 
-However it does not need to be so complicated and convoluted, and I will show you a different flow with vcpkg and CMake, that will make setup of Visual Studio solutions with external libraries extremely simple. First and foremost, download [vcpkg](https://vcpkg.io/en/getting-started.html) a multi-platform package manager for C++. Next, install the libraries you need,  in the case of my projects I issued:
+However it does not need to be so complicated and convoluted, and I will show you a different flow with vcpkg and CMake, that will make setup of Visual Studio solutions with external libraries extremely simple. First and foremost, download [vcpkg](https://vcpkg.io/en/getting-started.html) a multi-platform package manager for C++. Then install the libraries you need, in the case of my projects I issued:
 
 ```shell
 ./vcpkg install glfw3:x64-windows glfw3:x86-windows glew:x64-windows glew:x86-windows glm:x64-windows glm:x86-windows
 ```
-NOte that I am explicitly stating the version I want to install, because by default if no version is provided vcpkg will only install x86. This should be the output once everything is installed:
+Note that I am explicitly stating the version I want to install, because by default if no version is provided vcpkg will only install x86. This should be the output once everything is installed:
 
 ```shell
 Total elapsed time: 1.581 min
@@ -108,8 +108,8 @@ However I am not a big fan of global environment variables so we will use a diff
 }
 ```
 
-And... done! Now you can create your own CMakeLists.txt files and the libraries you have installed will work out of the box. If you have followed along and would like to test your openGL, go to my OpenGL [repo](https://github.com/NikBomb/OpenGL/tree/master) and compile the project.
+And... done! Now you can create your own CMakeLists.txt files and the libraries you have installed will work out of the box. If you have followed along and would like to test your environment, go to my OpenGL [repo](https://github.com/NikBomb/OpenGL/tree/master) and compile the project.
 
-As a bonus tip, you can have different versions of vcpkg installed on the same machine, with different libraries installed and just point to the vcpkg of interest using the  "CMAKE_TOOLCHAIN_FILE". Sounds like we can use C++ with virtual environments a-la [Python](https://docs.python.org/3/tutorial/venv.html)
+As a bonus tip, you can have different versions of vcpkg installed on the same machine, with different libraries installed and just point to the vcpkg of interest using the "CMAKE_TOOLCHAIN_FILE". Sounds like we can use C++ with virtual environments a-la [Python](https://docs.python.org/3/tutorial/venv.html), how amazing is that?
 
 I hope this was informative, feel free to reach out for comments and feedback!
