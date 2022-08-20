@@ -35,13 +35,13 @@ glm provides CMake targets:
     target_link_libraries(main PRIVATE glm::glm)
 ```
 
-The official guide for vcpkg suggests that once all the libraries are installed, you can render those available to Visual Studio using:
+The official guide for vcpkg suggests that once all the libraries are installed, you can make those available to Visual Studio using:
 
 ```shell
 ./vcpkg integrate install
 ```
 
-However I am not a big fan of global environment variables so we will use a different strategy. Install [CMake](https://cmake.org/) on your machine and create a new visual studio solution using the CMake template. The new folder structure will cotain a "CmakePresets.json", with variables used by CMake. Follow the snippet below and add the path to your local vcpkg in the CMAKE_TOOLCHAIN_FILE variable:
+However I am not a big fan of global environment variables so we will use a different strategy. Install [CMake](https://cmake.org/) on your machine and create a new visual studio solution using the CMake template. The new folder structure will contain a "CmakePresets.json", with variables used by CMake. Follow the snippet below and add the path to your local vcpkg in the CMAKE_TOOLCHAIN_FILE variable:
 
 ```json
 {
@@ -108,7 +108,7 @@ However I am not a big fan of global environment variables so we will use a diff
 }
 ```
 
-And... done! Now you can create your own CMakeLists.txt files and the libraries you have installed will work out of the box. If you have followed along and would like to test your environment, go to my OpenGL [repo](https://github.com/NikBomb/OpenGL/tree/master) and compile the project.
+And... done! Now you can create your own CMakeLists.txt file and the libraries you have installed will work out of the box. If you have followed along and would like to test your environment, go to my OpenGL [repo](https://github.com/NikBomb/OpenGL/tree/master) and compile the project.
 
 As a bonus tip, you can have different versions of vcpkg installed on the same machine, with different libraries installed and just point to the vcpkg of interest using the "CMAKE_TOOLCHAIN_FILE". Sounds like we can use C++ with virtual environments a-la [Python](https://docs.python.org/3/tutorial/venv.html), how amazing is that?
 
