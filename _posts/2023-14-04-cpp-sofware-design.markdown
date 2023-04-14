@@ -28,7 +28,7 @@ In just a little more than 400 pages, Klaus gives not only a modern definition o
 - Type Erasure 
 - Decorator
 
-What sets this book apart from other resources on design patterns is the emphasis on the intent of each pattern and the differences between them. This makes it easier for readers to understand how to apply each pattern. My personal favorite design pattern in the book is Type Erasure, and the chapter dedicated to it provides fascinating insights into optimization techniques and benchmarks.
+What sets this book apart from other resources on design patterns is the emphasis on the intent of each pattern and the differences between them. This makes it easier for readers to understand how to apply each pattern. 
 
 What I really like about this refreshed view on patterns, is the accent on the intent of every pattern and the differences between one another. For the C++ passionates, every pattern is described as well by means of modern C++ code, with an emphasis on modern practices. All the code of the book is hosted on [github](https://github.com/igl42/cpp_software_design). My favourite design pattern is by far the Type Erasure, I think this book can be considered as the first real reference for this pattern. The code, the benchmarks and the optimization techniques shown in the chapter dedicated to this pattern, are really interesting and inspiring.
 
