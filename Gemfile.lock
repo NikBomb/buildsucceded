@@ -269,12 +269,12 @@ GEM
       unf_ext
     unf_ext (0.0.8)
     unicode-display_width (1.8.0)
-    wdm (0.1.1)
     webrick (1.7.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
-  x64-mingw-ucrt
+  ruby
+  x64-unknown
   x86_64-linux
 
 DEPENDENCIES
@@ -283,7 +283,6 @@ DEPENDENCIES
   jekyll-paginate
   rouge (~> 3.26.0)
   tzinfo-data
-  wdm (~> 0.1.0)
   webrick (~> 1.7)
 
 BUNDLED WITH
