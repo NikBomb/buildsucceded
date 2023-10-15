@@ -66,7 +66,7 @@ I did try to get an analytical answer, but opted for a more practical and pragma
 From the current altitude:
 
 * For a given fuel rate compute the time at which the fuel will run out, know as burn time $t_b$ 
-* Compute the position from equation $eqref{5}$ given $t_b$
+* Compute the position from equation $\eqref{5}$ given $t_b$
 * If position is bigger than 0, decrease fuel rate, otherwise increase it.
 * Once we find a suitable $k$ satisfying the above, decide to accept or reject solution if at $tb$ velocity is too high.
 
