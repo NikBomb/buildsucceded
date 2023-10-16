@@ -12,11 +12,13 @@ Inspired by the landing images and videos, I decided to re-approach the topic of
 
 ## The rocket acceleration 
 <img src="/assets/images/rocket/ConservationMomentum.png" width="500" style="display: block; margin: 0 auto">
-To grasp the basics of the physics at play let's start from a rocket, in a vacuum under the influence of gravity. Between instants I and II the rocket will experience a force from gravity pulling it downwards. At the same time, the rocket can contrast gravity burning some fuel, ejecting it with a velocity w. The ejection of mass will accelerate the rocket in the upwards direction. Since this is a varying mass system, the classical Newton's second law cannot be applied. Therefore to write the equation of motion we will use the conservation of momentum $p$ between I and II. Note that $p$ is a scalar quantity under the assumption of thrusters and flight path aligned with gravity. Also, the conservation of momentum will be written in a fixed reference frame, where the total velocity of expelled gas is $v + dv - w$
+To grasp the basics of the physics at play let's start from a rocket, in a vacuum under the influence of gravity. Between instants I and II the rocket will experience a force from gravity pulling it downwards. At the same time, the rocket can contrast gravity burning some fuel, ejecting it with a velocity w. The ejection of mass will accelerate the rocket in the upwards direction. Since this is a varying mass system, the classical Newton's second law cannot be applied. Therefore to write the equation of motion we will use the conservation of momentum $p$ between I and II. Note that $p$ is a scalar quantity under the assumption of thrusters and flight path aligned with gravity. Also, the conservation of momentum will be written in a fixed reference frame, where the total velocity of expelled gas is $v + dv - w$. Indicating as $p_{II}$ the momentum at II and $p_{I}$ the momentum at I:
 
-$$ p_{II} - p_{I} = FdT  $$
+$$ p_{II} - p_{I} = Fdt  $$
 
 $$ p_{II} = (M - dm_g)(v + dv)  - (w -v - dv) dm_g \approx Mv +  M dv - w dm_g$$
+
+The $\approx\$ sign above is because I have dropped higher order terms like $dm_gdv$
 
 $$ p_{I} = Mv $$
 
@@ -25,6 +27,14 @@ $$ p_{II} - p_{I} =   Mdv - w dm_g$$
 An increase of expulsed gas mass is equal and opposite to a decrease of rocket's mass
 
 $$ dm_g = -dM$$
+Substituting this expression in the change of momentum $p_{II} - p_{I}$:
+
+$$ M \frac{dv} = Fdt - wdM $$
+
+I can relate the change in mass of the rocket with the mass rate $\dot{m}$ as:
+$$ M \frac{dv} = Fdt - w\dot{m}dt $$
+
+Dividing by $dt$ and $M$ both sides:
 
 $$ a = \frac{F}{M} - w \frac{\dot{m}}{M}$$
 
@@ -56,7 +66,7 @@ $$x = x_0 + v_0 t - \frac{1}{2}gt^2 + w  \frac{M_0 - kt}{k} \log{\frac{M_0 - kt}
 
 ## Simulating rocket descent
 
-Thanks to equations $\eqref{4}$ and $\eqref{5}$ given some data about the rocket such as mass and velocity of gas expulsion and gravity, I can now simulate the descent of the rocket, given a certain fuel rate. The assumptions of constant fuel rate, it not so stringent because I can assume that for small increments of time the mass change in teh rocket can be linearly approximated, and therefore the descent can be simulated using the equations derived. I have actually found a plethora of games on lunar descent that let you simulate this process, so I have decided to create my own replica of Lunar Lander in Javascript. The premise is that you lunar lander is falling towards the Moon and every 10 seconds you can decide to burn some fuel at certain rate. The objective of the game is to slow down the lander and land safely. You can give it a try [here](https://nikbomb.github.io/lunar-lander-1d). You can read more about the original version of the game [here](https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander.html). I tried different strategies to beat the game, with some success, but next I want to describe an algorithm to get a baseline for the fuel rate to input.
+Thanks to equations $\eqref{4}$ and $\eqref{5}$ given some data about the rocket such as mass and velocity of gas expulsion and gravity, I can now simulate the descent of the rocket, given a certain fuel rate. The assumption of constant fuel rate, it not so stringent because I can assume that for small increments of time the mass change in the rocket can be linearly approximated, and therefore the descent can be simulated using the equations derived. I have actually found a plethora of games on lunar descent that let you simulate this process, so I have decided to create my own replica of Lunar Lander in Javascript. The premise is that you lunar lander is falling towards the Moon and every 10 seconds you can decide to burn some fuel at certain rate. The objective of the game is to slow down the lander and land safely. You can give it a try [here](https://nikbomb.github.io/lunar-lander-1d). You can read more about the original version of the game [here](https://www.cs.brandeis.edu/~storer/LunarLander/LunarLander.html). I tried different strategies to beat the game, with some success, but next I want to describe an algorithm to get a baseline for the fuel rate to input.
 
 ## Computing fuel rate for the suicide burn
 
@@ -67,8 +77,8 @@ From the current altitude:
 
 * For a given fuel rate compute the time at which the fuel will run out, know as burn time $t_b$ 
 * Compute the position from equation $\eqref{5}$ given $t_b$
-* If position is bigger than 0, decrease fuel rate, otherwise increase it.
-* Once we find a suitable $k$ satisfying the above, decide to accept or reject solution if at $tb$ velocity is too high.
+* If position is bigger than 0 (remember that 0 denotes the surface), decrease fuel rate, otherwise increase it.
+* Once I find a suitable $k$ satisfying the above, decide to accept or reject solution if at $tb$ velocity is too high.
 
 Using the algorithm above I was able to find a solution starting from the initial altitude of the game. The computed rate is 75.28 $\frac{lbs}{sec}$. 
 
