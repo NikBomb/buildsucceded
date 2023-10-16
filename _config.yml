@@ -18,7 +18,7 @@ remote_theme: mmistakes/so-simple-theme
 skin: "/assets/css/skins/default.css"
 locale: en-UK
 title: "Programming and Maths"
-description: "My personal blog where I write about my two passions"
+description: "Personal blog where I write about my two passions"
 baseurl: ""
 url: "nicobombace.com"
 logo: # path of site logo, e.g. "/images/logo.png"
