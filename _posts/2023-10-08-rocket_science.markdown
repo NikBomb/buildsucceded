@@ -32,6 +32,7 @@ Substituting this expression in the change of momentum $p_{II} - p_{I}$:
 $$ M dv = Fdt - wdM $$
 
 I can relate the change in mass of the rocket with the mass rate $\dot{m}$ as:
+
 $$ M dv = Fdt - w\dot{m}dt $$
 
 Dividing by $dt$ and $M$ both sides:
