@@ -29,10 +29,10 @@ An increase of expulsed gas mass is equal and opposite to a decrease of rocket's
 $$ dm_g = -dM$$
 Substituting this expression in the change of momentum $p_{II} - p_{I}$:
 
-$$ M \frac{dv} = Fdt - wdM $$
+$$ M dv = Fdt - wdM $$
 
 I can relate the change in mass of the rocket with the mass rate $\dot{m}$ as:
-$$ M \frac{dv} = Fdt - w\dot{m}dt $$
+$$ M dv = Fdt - w\dot{m}dt $$
 
 Dividing by $dt$ and $M$ both sides:
 
