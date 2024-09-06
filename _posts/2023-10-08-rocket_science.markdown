@@ -3,6 +3,7 @@ layout: post
 title:  "It's rocket science"
 date:   2023-10-08 08:00:00 +0000
 categories: [simulations, javascript]
+math: true
 ---
 
 ## Introduction
